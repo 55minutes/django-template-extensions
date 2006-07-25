@@ -1,10 +1,10 @@
-from django.core.template import Library
+from django.template import Library
 register = Library()
 
 def media_prefix():
     try:
-        from django.conf.settings import MEDIA_URL
+        from django.conf import settings
     except ImportError:
         return ''
-    return MEDIA_URL
+    return settings.MEDIA_URL
 media_prefix = register.simple_tag(media_prefix)
