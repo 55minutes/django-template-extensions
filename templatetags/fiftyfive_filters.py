@@ -10,3 +10,8 @@ def tabularize(value, cols):
             return [value]
     return map(*([None] + [value[i::cols] for i in range(0, cols)]))
 register.filter('tabularize', tabularize)
+
+def multiply(value, number):
+    """Multiplies the value by numer"""
+    return float(value)*number
+register.filter('multiply', multiply)
