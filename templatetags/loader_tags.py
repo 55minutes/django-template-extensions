@@ -25,7 +25,6 @@ class ExtendsNode(Node):
                 raise TemplateSyntaxError, "The first argument to %r tag must be a Template instance" % bits[0]
             template_basedir = os.path.split(t.name)[0]
             template_path = os.path.join(template_basedir, self.parent_name)
-            print template_path
             return get_template(template_path)
         except TemplateDoesNotExist:
             raise TemplateSyntaxError, "Template %r cannot be extended, because it doesn't exist" % parent
