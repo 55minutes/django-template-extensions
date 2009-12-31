@@ -1,0 +1,7 @@
+This distribution requires setuptools. The easiest way is to setup the following svn:externals definition::
+
+    ez_setup svn://svn.eby-sarna.com/svnroot/ez_setup
+
+You can set this by executing this command in your project directory::
+
+    svn propedit svn:externals .
