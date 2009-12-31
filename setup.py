@@ -11,15 +11,15 @@ except ImportError:
     from setuptools import setup, find_packages
 
 
-DISTRIBUTION_NAME = 'SomeName'
+DISTRIBUTION_NAME = '55M-Django-Template-Extensions'
 
-SHORT_DESCRIPTION = 'A Django applications'
+SHORT_DESCRIPTION = 'Useful Django template tags and filters'
 if os.path.exists("README.rst"):
     LONG_DESCRIPTION = codecs.open("README.rst", "r", "utf-8").read()
 else:
     LONG_DESCRIPTION = SHORT_DESCRIPTION
 
-PACKAGE_URL = 'download url'
+PACKAGE_URL = 'https://internal.55minutes.com/svn/fiftyfive/python/trunk/django/apps/55-template-extensions/'
 
 
 setup(
@@ -35,11 +35,11 @@ setup(
     download_url=PACKAGE_URL,
     platforms=["any"],
     classifiers=[
-        "Development Status :: 4 - Beta",
+        "Development Status :: 5 - Production/Stable",
         "Environment :: Web Environment",
         "Framework :: Django",
         "Intended Audience :: Developers",
-        "License :: Other/Proprietary License",
+        "License :: OSI Approved :: Apache Software License",
         "Natural Language :: English",
         "Operating System :: OS Independent",
         "Operating System :: POSIX",
@@ -49,7 +49,6 @@ setup(
 
     package_dir = {'':'src'},
     packages=find_packages('src'),
-    #namespace_packages=['somenamespace'],
     zip_safe=False,
     include_package_data=True,
 )
