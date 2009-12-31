@@ -6,3 +6,4 @@ ez_setup/
 
 *.swp
 *.pyc
+.DS_Store
