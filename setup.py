@@ -19,7 +19,7 @@ if os.path.exists("README.rst"):
 else:
     LONG_DESCRIPTION = SHORT_DESCRIPTION
 
-PACKAGE_URL = 'https://internal.55minutes.com/svn/fiftyfive/python/trunk/django/apps/55-template-extensions/'
+PACKAGE_URL = 'git://github.com/55minutes/django-template-extensions.git'
 
 
 setup(
@@ -51,4 +51,6 @@ setup(
     packages=find_packages('src'),
     zip_safe=False,
     include_package_data=True,
+
+    install_requires = ['lxml'],
 )
